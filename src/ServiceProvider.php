@@ -1,6 +1,6 @@
 <?php
 
-namespace Acaronlex\LaravelCalendar;
+namespace GCS\LaravelCalendar;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
@@ -14,7 +14,7 @@ class ServiceProvider extends BaseServiceProvider
     public function register()
     {
         $this->app->bind('laravel-calendar', function ($app) {
-            return $app->make('Acaronlex\LaravelCalendar\Calendar');
+            return $app->make('GCS\LaravelCalendar\Calendar');
         });
     }
 

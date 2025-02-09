@@ -9,7 +9,7 @@ Thanks to [@maddhatter](https://github.com/maddhatter) for the [initial repo](ht
 ## Installing
 Require the package with composer using the following command:
 
-    composer require acaronlex/laravel-calendar
+    composer require GCS/laravel-calendar
 
 The provider and `Calendar` alias will be registered automatically.
 
@@ -37,10 +37,10 @@ $event = \Calendar::event(
 ```
 #### Implementing `Event` Interface
 
-Alternatively, you can use an existing class and have it implement `Acaronlex\LaravelCalendar\Event`. An example of an Eloquent model that implements the `Event` interface:
+Alternatively, you can use an existing class and have it implement `GCS\LaravelCalendar\Event`. An example of an Eloquent model that implements the `Event` interface:
 
 ```php
-class EventModel extends Eloquent implements \Acaronlex\LaravelCalendar\Event
+class EventModel extends Eloquent implements \GCS\LaravelCalendar\Event
 {
 
     protected $dates = ['start', 'end'];
@@ -98,10 +98,10 @@ class EventModel extends Eloquent implements \Acaronlex\LaravelCalendar\Event
 
 #### `IdentifiableEvent` Interface
 
-If you wish for your existing class to have event IDs, implement `\Acaronlex\LaravelCalendar\IdentifiableEvent` instead. This interface extends `\Acaronlex\LaravelCalendar\Event` to add a `getId()` method:
+If you wish for your existing class to have event IDs, implement `\GCS\LaravelCalendar\IdentifiableEvent` instead. This interface extends `\GCS\LaravelCalendar\Event` to add a `getId()` method:
 
 ```php
-class EventModel extends Eloquent implements \Acaronlex\LaravelCalendar\IdentifiableEvent
+class EventModel extends Eloquent implements \GCS\LaravelCalendar\IdentifiableEvent
 {
 
     // Implement all Event methods ...
@@ -144,7 +144,7 @@ $event = \Calendar::event(
 
 ```php
 <?php
-class CalendarEvent extends \Illuminate\Database\Eloquent\Model implements \Acaronlex\LaravelCalendar\Event
+class CalendarEvent extends \Illuminate\Database\Eloquent\Model implements \GCS\LaravelCalendar\Event
 {
     //...
 

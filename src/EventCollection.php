@@ -1,6 +1,6 @@
 <?php
 
-namespace Acaronlex\LaravelCalendar;
+namespace GCS\LaravelCalendar;
 
 use Illuminate\Support\Collection;
 
